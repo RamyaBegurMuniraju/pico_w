@@ -1,5 +1,6 @@
 
 Step 1: Download the Pico SDK
+==============================
 
 Clone the official Raspberry Pi Pico SDK and initialize its submodules:
 
@@ -8,6 +9,7 @@ cd pico-sdk
 git submodule update --init
 
 Step 2: Set Up Your Project Structure
+=====================================
 
 Create a standalone directory for your project:
 
@@ -28,6 +30,7 @@ mkdir ~/standalone/server
 cp btstack_config.h server.c CMakeLists.txt temp_sensor.gatt ~/standalone/server/
 
 Step 3: Set Environment Variable
+=================================
 
 Tell CMake where to find the Pico SDK:
 
@@ -37,6 +40,7 @@ export PICO_SDK_PATH=~/pico-sdk
 You can also add this line to your ~/.bashrc to make it persistent.
 
 Step 4: Build the Firmware
+==========================
 
 Create a build directory and compile the project:
 
@@ -56,6 +60,7 @@ or
 picow_ble_temp_sensor.uf2
 
 Step 5: Flash the Pico W via Drag-and-Drop
+==========================================
 
 Hold the BOOTSEL button on the Pico W.
 
@@ -68,6 +73,7 @@ Drag and drop the .uf2 file (e.g. picow_ble_temp_sensor.uf2) onto the drive.
 The device will automatically reboot and start running your code.
 
 Step 6: Verify BLE Advertising
+==============================
 
 To check that your Pico W is advertising correctly:
 
